@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merriweather", serif;
 }
 
 body {
@@ -29,7 +28,8 @@ body {
 .container {
   background-color: rgba(60, 60, 60, 0.8);
   color: white;
-  padding: 2rem;
+  padding: 5rem;
+  margin: 2rem;
   border-radius: 20px;
   box-shadow: 0 0 20px gray;
   display: grid;
@@ -37,25 +37,27 @@ body {
   grid-template-columns: repeat(1, 1fr);
 }
 
-.card {
-  background-color: gray;
-  padding: 1rem;
-  border-radius: 20px;
-  min-height: 8rem;
-  display: grid;
-  align-items: center;
-  justify-items: stretch;
-  position: relative;
-  cursor: pointer;
-  font-size: 1.2em;
-  font-weight: bold;
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  z-index: 2;
+}
 
-  &__background {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    border-radius: 20px;
-  }
+.modal {
+  position: fixed;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  margin: 2rem;
+  height: 90vh;
+  width: 95vw;
+  background-color: white;
+  transform: scale(0);
+  transition: all 0.2s;
+  overflow: auto;
 }
