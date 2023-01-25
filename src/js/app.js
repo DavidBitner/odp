@@ -1,4 +1,5 @@
 const overlay = document.querySelector(`.overlay`);
+const btnBack = document.querySelector(`#btn-back`);
 
 function showOverlay() {
   overlay.style.visibility = "visible";
@@ -20,17 +21,29 @@ function closeModal() {
   modal.style.transform = "scale(0)";
 }
 
+function showBtn() {
+  btnBack.style.visibility = "visible";
+  btnBack.style.opacity = "1";
+}
+
+function closeBtn() {
+  btnBack.style.opacity = "0";
+  btnBack.style.visibility = "hidden";
+}
+
 function handlers(event) {
   const modalClass = event.target.parentElement.id;
 
   if (event.target.parentElement.className == "card") {
     showOverlay();
     showModal(modalClass);
+    showBtn();
   }
 
-  if (event.target.className == "overlay") {
+  if (event.target.className == "overlay" || event.target.id == "btn-back") {
     closeOverlay();
     closeModal();
+    closeBtn();
   }
 }
 
