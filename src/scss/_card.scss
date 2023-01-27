@@ -13,8 +13,10 @@
   transition: all 0.2s;
   overflow: hidden;
   box-shadow: 0 0 10px black;
-
+  text-align: center;
+  
   &__background {
+    background-color: white;
     top: 0;
     left: 0;
     height: 100%;
@@ -22,7 +24,7 @@
     position: absolute;
     border-radius: 20px;
     background-position: center;
-    background-size: cover;
+    background-size:contain;
     background-repeat: no-repeat;
     filter: brightness(30%) blur(1px);
     transform: scale(3);
@@ -46,4 +48,8 @@
 
 #buy-subscription-section .card__background {
   background-image: url("../img/buy-subscription-section/background-card.png");
+}
+
+#cookie-preferences .card__background {
+  background-image: url("../img/cookie-preferences/background-card.png");
 }

@@ -1,5 +1,6 @@
 const overlay = document.querySelector(`.overlay`);
 const btnBack = document.querySelector(`#btn-back`);
+let modalClass = "";
 
 function showOverlay() {
   overlay.style.visibility = "visible";
@@ -16,8 +17,8 @@ function showModal(modalClass) {
   modal.style.transform = "scale(1)";
 }
 
-function closeModal() {
-  const modal = document.querySelector(`.modal`);
+function closeModal(modalClass) {
+  const modal = document.querySelector(`.${modalClass}`);
   modal.style.transform = "scale(0)";
 }
 
@@ -32,9 +33,8 @@ function closeBtn() {
 }
 
 function handlers(event) {
-  const modalClass = event.target.parentElement.id;
-
   if (event.target.parentElement.className == "card") {
+    modalClass = event.target.parentElement.id;
     showOverlay();
     showModal(modalClass);
     showBtn();
@@ -42,9 +42,36 @@ function handlers(event) {
 
   if (event.target.className == "overlay" || event.target.id == "btn-back") {
     closeOverlay();
-    closeModal();
+    closeModal(modalClass);
     closeBtn();
   }
 }
 
+function cookiePreferenceActivate() {
+  const inputs = document.querySelectorAll(
+    ".cookie-preferences__option__checkbox"
+  );
+
+  inputs.forEach((input) => {
+    input.checked = true;
+  });
+}
+
+function cookiePreferenceDeactivate() {
+  const inputs = document.querySelectorAll(
+    ".cookie-preferences__option__checkbox"
+  );
+
+  inputs.forEach((input) => {
+    input.checked = false;
+  });
+}
+
 window.addEventListener("click", handlers);
+
+document
+  .querySelector(`#cookie-preferences-reject-all`)
+  .addEventListener("click", cookiePreferenceDeactivate);
+document
+  .querySelector(`#cookie-preferences-accept-all`)
+  .addEventListener("click", cookiePreferenceActivate);

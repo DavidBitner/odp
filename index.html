@@ -15,12 +15,16 @@
         <div class="card__background"></div>
         <div class="card__title">Buy Subscription Section</div>
       </div>
+      <div class="card" id="cookie-preferences">
+        <div class="card__background"></div>
+        <div class="card__title">Cookie Preferences</div>
+      </div>
     </div>
 
     <button id="btn-back"></button>
 
     <div class="overlay">
-      <div class="buy-subscription-section modal" id="buy-subscription-section">
+      <div class="buy-subscription-section modal">
         <div class="buy-subscription-section__title">
           Get the most out of your mobile <br />
           with the right subscription
@@ -87,6 +91,94 @@
         <button class="buy-subscription-section__btn">
           See all subscriptions
         </button>
+      </div>
+
+      <div class="cookie-preferences modal">
+        <div class="cookie-preferences__title">About Your Privacy</div>
+        <p class="cookie-preferences__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Exercitationem ducimus eligendi consequuntur sed numquam culpa
+          aperiam, facilis sit explicabo, perspiciatis quo accusantium! Aut ex
+          voluptate, neque labore voluptatum corporis sint? Nemo accusantium
+          assumenda accusamus, laudantium quasi vitae, amet dicta consectetur,
+          itaque totam illo minus est reprehenderit recusandae esse cum dolorum
+          labore. Dicta possimus veniam at alias?
+        </p>
+        <button
+          class="cookie-preferences__btn"
+          id="cookie-preferences-accept-all"
+        >
+          Allow all
+        </button>
+        <div class="cookie-preferences__title">Manage Consent Preferences</div>
+
+        <div class="cookie-preferences__options">
+          <div class="cookie-preferences__option">
+            <div class="cookie-preferences__option__plus">+</div>
+            <div class="cookie-preferences__option__text">
+              Strictly Necessary Cookies
+            </div>
+            <div class="cookie-preferences__option__text__weak">
+              Always Active
+            </div>
+          </div>
+          <div class="cookie-preferences__option">
+            <div class="cookie-preferences__option__plus">+</div>
+            <div class="cookie-preferences__option__text">
+              Functional Cookies
+            </div>
+            <input
+              class="cookie-preferences__option__checkbox"
+              type="checkbox"
+              id="checkbox1"
+            />
+            <label
+              for="checkbox1"
+              class="cookie-preferences__option__label"
+            ></label>
+          </div>
+          <div class="cookie-preferences__option">
+            <div class="cookie-preferences__option__plus">+</div>
+            <div class="cookie-preferences__option__text">
+              Performance Cookies
+            </div>
+            <input
+              class="cookie-preferences__option__checkbox"
+              type="checkbox"
+              id="checkbox2"
+            />
+            <label
+              for="checkbox2"
+              class="cookie-preferences__option__label"
+            ></label>
+          </div>
+          <div class="cookie-preferences__option">
+            <div class="cookie-preferences__option__plus">+</div>
+            <div class="cookie-preferences__option__text">
+              Personalised ads and content measurement, audience insights and
+              product development
+            </div>
+            <input
+              class="cookie-preferences__option__checkbox"
+              type="checkbox"
+              id="checkbox3"
+            />
+            <label
+              for="checkbox3"
+              class="cookie-preferences__option__label"
+            ></label>
+          </div>
+        </div>
+
+        <div class="cookie-preferences__btns-grid">
+          <div class="cookie-preferences__btn">Submit My Choices</div>
+          <div
+            class="cookie-preferences__btn"
+            id="cookie-preferences-reject-all"
+          >
+            Reject all
+          </div>
+        </div>
       </div>
     </div>
   </body>
