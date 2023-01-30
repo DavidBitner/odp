@@ -37,6 +37,10 @@ $bss-white: #fff;
     grid-template-columns: repeat(3, 1fr);
     background-color: $bss-1;
     gap: 3rem;
+
+    @media only screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__plan {

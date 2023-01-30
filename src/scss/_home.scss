@@ -14,6 +14,12 @@ body {
   justify-content: center;
 }
 
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 #background-img {
   background-image: url("../img/background.jpg");
   background-position: center;
@@ -48,29 +54,32 @@ body {
   z-index: 2;
   overflow: auto;
   display: grid;
-  align-items: center;
+  justify-items: center;
 }
 
 .modal {
   position: absolute;
   display: grid;
-  justify-self: center;
-  margin: 2rem;
+  margin: 5rem;
   background-color: white;
   transform: scale(0);
   transition: all 0.2s;
+
+  @media only screen and (max-width: 900px) {
+    margin: 10rem;
+  }
 }
 
 #btn-back {
-  border-radius: 200px;
+  border-radius: 50%;
   position: fixed;
-  bottom: 2rem;
+  top: 2rem;
   right: 2rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
   cursor: pointer;
   border: none;
   text-align: center;
-  background-color: black;
+  background-color: transparent;
   box-shadow: 0 0 20px black;
   z-index: 3;
   transform: scale(1);
@@ -78,6 +87,9 @@ body {
   visibility: hidden;
   box-shadow: 0 0 0 black;
   opacity: 0;
+  color: red;
+  font-size: 3rem;
+  font-weight: bold;
 
   &:hover {
     transform: scale(1.5);
