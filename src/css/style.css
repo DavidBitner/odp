@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  width: 100vw;
+  width: 98vw;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -16,7 +16,7 @@ body {
 
 @media only screen and (max-width: 900px) {
   html {
-    font-size: 50%;
+    font-size: 75%;
   }
 }
 #background-img {
@@ -40,29 +40,34 @@ body {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+  overflow: auto;
 }
 
 .overlay {
   height: 100vh;
   width: 100vw;
-  position: fixed;
+  position: absolute;
   background-color: black;
   visibility: hidden;
   opacity: 0;
   transition: all 0.2s;
   z-index: 2;
-  overflow: auto;
   display: grid;
   justify-items: center;
+  align-content: center;
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   display: grid;
-  margin: 5rem;
+  margin: 2rem;
+  padding: 2rem;
   background-color: white;
   transform: scale(0);
   transition: all 0.2s;
+  overflow: auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 @media only screen and (max-width: 900px) {
   .modal {
@@ -165,12 +170,15 @@ body {
   background-image: url("../img/cookie-preferences/background-card.png");
 }
 
+#signup .card__background {
+  background-image: url("../img/signup/background-card.png");
+}
+
 .buy-subscription-section {
   font-family: "Nunito", sans-serif;
   display: grid;
   gap: 1rem;
   justify-items: center;
-  align-content: center;
   text-align: center;
   padding: 4rem;
   color: #202240;
@@ -271,7 +279,6 @@ body {
   color: #1a1a41;
   display: grid;
   justify-items: stretch;
-  align-content: center;
   padding: 2rem;
   box-shadow: -50px -50px 0 #1a1a41;
   font-size: 0.9rem;
@@ -380,4 +387,90 @@ body {
   justify-items: center;
   align-items: center;
   margin-top: 1rem;
+}
+
+.signup {
+  padding: 2rem;
+  background-color: #252422;
+  color: #fffcf2;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  font-family: "Trebuchet MS", sans-serif;
+  max-width: 35vw;
+  border-radius: 10px;
+  overflow: auto;
+}
+@media only screen and (max-width: 900px) {
+  .signup {
+    max-width: 60vw;
+  }
+}
+.signup__signin {
+  font-size: 0.7rem;
+  justify-self: right;
+  margin-bottom: 1rem;
+}
+.signup__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.signup__subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.signup__input-group {
+  width: 70%;
+  display: grid;
+  gap: 0.3rem;
+}
+.signup__label {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.signup__input {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #252422;
+  color: #fffcf2;
+  outline: none;
+  border: 1px solid #ccc5b9;
+  transition: all 0.2s;
+}
+.signup__input:focus {
+  border: 1px solid white;
+}
+.signup__btn {
+  padding: 1rem;
+  background-color: #eb5e28;
+  color: #fffcf2;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 70%;
+  transition: all 0.2s;
+}
+.signup__btn:hover {
+  transform: scale(1.1);
+}
+.signup__btn:active {
+  transform: scale(0.9);
+}
+.signup__tos {
+  background-color: #403d39;
+  font-size: 0.7rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.signup a {
+  color: #eb5e28;
+  text-decoration: none;
+}
+.signup a:hover {
+  text-decoration: underline;
+}
+.signup a:visited {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

@@ -20,6 +20,10 @@
         <div class="card__background"></div>
         <div class="card__title">Cookie Preferences</div>
       </div>
+      <div class="card" id="signup">
+        <div class="card__background"></div>
+        <div class="card__title">Sign Up</div>
+      </div>
     </div>
 
     <button id="btn-back">X</button>
@@ -27,13 +31,11 @@
     <div class="overlay">
       <div class="buy-subscription-section modal">
         <div class="buy-subscription-section__title">
-          Get the most out of your mobile <br />
-          with the right subscription
+          Get the most out of your mobile with the right subscription
         </div>
         <div class="buy-subscription-section__subtitle">
           All devices come with free delivery or pickup as standard. See
-          information on <br />
-          available shopping options for your location
+          information on available shopping options for your location
         </div>
 
         <div class="buy-subscription-section__plans">
@@ -179,6 +181,61 @@
           >
             Reject all
           </div>
+        </div>
+      </div>
+
+      <div class="signup modal">
+        <div class="signup__signin">
+          Already have an account? <a href="#">Sign in</a>
+        </div>
+
+        <div class="signup__title">Have a question about this product?</div>
+        <div class="signup__subtitle">
+          Have a question about this product? Sign up to open an issue and
+          contact its maintainers.
+        </div>
+
+        <div class="signup__input-group">
+          <label for="signup-username" class="signup__label"
+            >Pick a username</label
+          >
+          <input
+            class="signup__input"
+            id="signup-username"
+            type="text"
+            placeholder="Enter your username"
+          />
+        </div>
+
+        <div class="signup__input-group">
+          <label for="signup-email" class="signup__label"
+            >You email address</label
+          >
+          <input
+            class="signup__input"
+            id="signup-email"
+            type="email"
+            placeholder="Enter your email address"
+          />
+        </div>
+
+        <div class="signup__input-group">
+          <label for="signup-username" class="signup__label">Password</label>
+          <input
+            class="signup__input"
+            id="signup-password"
+            type="password"
+            placeholder="Enter a password"
+          />
+        </div>
+
+        <button class="signup__btn">Sign Up</button>
+
+        <div class="signup__tos">
+          By clicking "Sign Up", you agree to our
+          <a href="#">terms of service</a> and
+          <a href="#">privacy statement</a>. We'll occasionally send you account
+          related emails.'
         </div>
       </div>
     </div>

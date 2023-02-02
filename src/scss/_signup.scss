@@ -1,0 +1,99 @@
+.signup {
+  padding: 2rem;
+  background-color: #252422;
+  color: #fffcf2;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  font-family: "Trebuchet MS", sans-serif;
+  max-width: 35vw;
+  border-radius: 10px;
+  
+  overflow: auto;
+
+  @media only screen and (max-width: 900px) {
+    max-width: 60vw;
+  }
+
+  &__signin {
+    font-size: 0.7rem;
+    justify-self: right;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  &__input-group {
+    width: 70%;
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  &__label {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  &__input {
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #252422;
+    color: #fffcf2;
+    outline: none;
+    border: 1px solid #ccc5b9;
+    transition: all 0.2s;
+
+    &:focus {
+      border: 1px solid white;
+    }
+  }
+
+  &__btn {
+    padding: 1rem;
+    background-color: #eb5e28;
+    color: #fffcf2;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 70%;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &__tos {
+    background-color: #403d39;
+    font-size: 0.7rem;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  & a {
+    color: #eb5e28;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
